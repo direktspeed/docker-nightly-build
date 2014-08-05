@@ -1,5 +1,12 @@
 #!/bin/bash
 #/build-binary --upload ftp://user:pass@host.tld git://user:pass@github.com/username/repo s3://username:pass
+
+# Self Update
+rm -rf run.1
+wget https://raw.githubusercontent.com/DirektSPEED/docker-nightly-build/master/run
+chmod +x /run.1
+ln -s /run.1 /build-binary
+
 #TODO: Check if /var/run/docker.sock exists else
 echo "The Docker Socket needs to be bound to /var/run/docker.sock else this don't works!"
 cd /docker
