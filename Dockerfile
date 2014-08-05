@@ -11,4 +11,6 @@ RUN ln -s /usr/bin/docker.io /usr/bin/docker
 # Make build & upload script execute able
 # TODO: Rename to /build-binary --upload ftp://user:pass@host.tld git://user:pass@github.com/username/repo s3://username:pass
 RUN chmod +x /run.1
+# Clean up apt-get to save some space.
+RUN apt-get -y clean
 #RUN /run.1
