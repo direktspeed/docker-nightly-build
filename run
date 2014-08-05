@@ -1,4 +1,4 @@
 #!/bin/bash
-docker -H unix:///var/run/docker.sock &
+docker -d &
 ps aux | grep docker
 make -C /docker.src binary
