@@ -1,4 +1,7 @@
 #!/bin/bash
-docker -d &
-ps aux | grep docker
-make -C /docker.src binary
+echo "The Docker Socket needs to be bound to /var/run/docker.sock else this don't works!"
+cd /docker
+git pull origin master
+make -C /docker binary
+echo "The Docker Socket needs to be bound to /var/run/docker.sock else this don't works!"
+# Now Uploading the Result to AMAZON S3 Via CURL 
