@@ -8,7 +8,7 @@ RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main rest
 RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
 # Update APT Source
 RUN apt-get -y update #makesure
-RUN apt-get install -y docker.io git build-essential wget
+RUN apt-get install -y --no-install-recommends docker.io git make wget
 RUN git clone https://github.com/docker/docker
 # TODO: Make it auto Create the File
 RUN wget https://raw.githubusercontent.com/DirektSPEED/docker-nightly-build/master/run
