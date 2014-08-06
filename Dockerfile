@@ -22,7 +22,7 @@ RUN apt-get -y clean
 CMD cd /docker && \
     git fetch origin && \
     git reset --hard origin/master && \
-    make binary cross   
+    make cross   
     
     
     #/build-binary --upload ftp://user:pass@host.tld git://user:pass@github.com/username/repo s3://username:pass
