@@ -19,4 +19,4 @@ RUN ln -s /usr/bin/docker.io /usr/bin/docker
 RUN chmod +x /run.1
 # Clean up apt-get to save some space.
 RUN apt-get -y clean
-#RUN /run.1
+CMD /run.1
