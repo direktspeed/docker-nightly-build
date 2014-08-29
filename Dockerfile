@@ -2,9 +2,9 @@ FROM ubuntu:14.04
 MAINTAINER Frank Lemanschik @ DirektSPEED Europe <frank@dspeed.eu>
 # Adding new ubuntu 14.04 Mirror sources to speed the things up
 RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse \n\
-          deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse \n\
-          deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse \n\
-          deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse" > /etc/apt/sources.list \
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse \n\
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse \n\
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse" > /etc/apt/sources.list \
  && apt-get -y update && apt-get install -y --no-install-recommends docker.io git make \
  && git clone git://github.com/docker/docker \
  && ln -s /usr/bin/docker.io /usr/bin/docker \
