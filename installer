@@ -1,0 +1,10 @@
+#!/bin/bash
+if mountpoint -q /target; then 
+	echo "Installing docker to /target"
+	docker.io cp nightly-build /docker/bundles:/target 
+else
+	echo "/target is not a mountpoint."
+	echo "You can either:" 
+	echo "- re-run this container with -v /usr/local/bin:/target" 
+	echo "- extract the docker binary (located at /docker/bundles)"
+fi
