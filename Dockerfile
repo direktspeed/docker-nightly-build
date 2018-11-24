@@ -1,4 +1,4 @@
-FROM ubuntu:14.04@sha256:1b8536f78e7621a8d51bec9e81ded8b15dbda6d46fe0ee0009422fcf96fda516
+FROM ubuntu:14.10@sha256:6341c688b4b0b82ec735389b3c97df8cf2831b8cb8bd1856779130a86574ac5c
 MAINTAINER Frank Lemanschik @ DirektSPEED Europe <frank@dspeed.eu>
 # Adding new ubuntu 14.04 Mirror sources to speed the things up
 RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse \n\
